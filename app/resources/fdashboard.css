@@ -1,0 +1,47 @@
+/* Work with the top navbar */
+body {
+	padding-top: 40px;
+}
+
+/* Keep the brand from indenting */
+.navbar .brand {
+	margin-left: 0;
+}
+
+/* Help our control rows breathe a bit */
+.controls .row-fluid {
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+
+.controls .row-fluid .btn:first-child {
+	margin-left: 2%;
+}
+
+/* Set up special styles for the various stats */
+.stat-tires .btn {
+	/*background-image: linear-gradient(to bottom, #A077FC, #BDA3FA, #A077FC);*/
+	/*background-image: linear-gradient(to bottom, #BAA4E8, #8771B5);*/
+	background-image: linear-gradient(to bottom, #A375FF, #8A5CE6);
+}
+
+.stat-brakes .btn {
+	/*background-image: linear-gradient(to bottom, #9BF09B, #82D682);*/
+	background-image: linear-gradient(to bottom, #75FF75, #5CE65C);
+}
+
+.stat-gearbox .btn {
+	background-image: linear-gradient(to bottom, #19D1A3, #00B88A);
+}
+
+.stat-body .btn {
+	background-image: linear-gradient(to bottom, #FFA319, #E68A00);
+}
+
+.stat-engine .btn {
+	background-image: linear-gradient(to bottom, #FF1919, #E60000);
+}
+
+.stat-suspension .btn {
+	background-image: linear-gradient(to bottom, #DA47B5, #C12E9C);
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FDashboard</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cleartype" content="on">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="app/resources/fdashboard.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+	<!-- Header -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<a class="brand" href="#">FDashboard</a>
+		</div> <!-- .navbar-inner -->
+	</div> <!-- .navbar .navbar-fixed-top -->
+	<!-- Statistics tracking -->
+	<div id="stats">
+		<div class="btn-toolbar controls">
+			<!-- Tires -->
+			<div class="btn-group row-fluid stat stat-tires">
+				<div class="btn btn-large span3"><i class="icon-minus"></i></div>
+				<div class="btn btn-large span6">
+					Tires: <strong>6</strong>
+				</div>
+				<div class="btn btn-large span3"><i class="icon-plus"></i></div>
+			</div> <!-- .btn-group -->
+
+			<!-- Brakes -->
+			<div class="btn-group row-fluid stat stat-brakes">
+				<div class="btn btn-large span3"><i class="icon-minus"></i></div>
+				<div class="btn btn-large span6">
+					Brakes: <strong>3</strong>
+				</div>
+				<div class="btn btn-large span3"><i class="icon-plus"></i></div>
+			</div> <!-- .btn-group -->
+
+			<!-- Gearbox -->
+			<div class="btn-group row-fluid stat stat-gearbox">
+				<div class="btn btn-large span3"><i class="icon-minus"></i></div>
+				<div class="btn btn-large span6">
+					Gearbox: <strong>3</strong>
+				</div>
+				<div class="btn btn-large span3"><i class="icon-plus"></i></div>
+			</div> <!-- .btn-group -->
+
+			<!-- Body -->
+			<div class="btn-group row-fluid stat stat-body">
+				<div class="btn btn-large span3"><i class="icon-minus"></i></div>
+				<div class="btn btn-large span6">
+					Body: <strong>3</strong>
+				</div>
+				<div class="btn btn-large span3"><i class="icon-plus"></i></div>
+			</div> <!-- .btn-group -->
+
+			<!-- Engine -->
+			<div class="btn-group row-fluid stat stat-engine">
+				<div class="btn btn-large span3"><i class="icon-minus"></i></div>
+				<div class="btn btn-large span6">
+					Engine: <strong>3</strong>
+				</div>
+				<div class="btn btn-large span3"><i class="icon-plus"></i></div>
+			</div> <!-- .btn-group -->
+
+			<!-- Suspension -->
+			<div class="btn-group row-fluid stat stat-suspension">
+				<div class="btn btn-large span3"><i class="icon-minus"></i></div>
+				<div class="btn btn-large span6">
+					Suspension: <strong>2</strong>
+				</div>
+				<div class="btn btn-large span3"><i class="icon-plus"></i></div>
+			</div> <!-- .btn-group -->
+		</div> <!-- .btn-toolbar -->
+	</div> <!-- #stats -->
+
+	<!-- Gear -->
+	<div id="gear" style="display: none">
+		Not yet implemented!
+	</div> <!-- #gear -->
+
+	<!-- Bottom navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-bottom">
+		<div class="navbar-inner">
+			<ul class="nav">
+				<li class="active"><a href="#">Stats</a></li>
+				<li><a href="#">Gear</a></li>
+				<li><a href="#">Player</a></li>
+			</ul>
+		</div> <!-- .navbar-inner -->
+	</div> <!-- .navbar .navbar-fixed-bottom -->
+
+	<!-- Woo Scripts -->
+	<script data-main="app/main" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>
