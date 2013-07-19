@@ -38,28 +38,23 @@
     <div id="stats">
       <div class="btn-toolbar controls">
         {{#each model}}
-        <div ccccclass="btn-group row-fluid stat" {{bindAttr class=":btn-group :row-fluid :stat name"}}>
-          <div class="btn btn-large span3"><i class="icon-minus"></i></div>
+        <div {{bindAttr class=":btn-group :row-fluid :stat name"}}>
+          <div class="btn btn-large span3" {{action decrement this}}><i class="icon-minus"></i></div>
           <div class="btn btn-large span6">
             {{capfirst name}}: <strong>{{value}}</strong>
           </div>
-          <div class="btn btn-large span3"><i class="icon-plus"></i></div>
+          <div class="btn btn-large span3" {{action increment this}}><i class="icon-plus"></i></div>
         </div> <!-- .btn-group -->
         {{/each}}
       </div> <!-- .btn-toolbar -->
     </div> <!-- #stats -->
-
-    <!-- Gear -->
-    <div id="gear" style="display: none">
-      Not yet implemented!
-    </div> <!-- #gear -->
-
   </script>
 
   <!-- Woo Scripts -->
   <script src="app/bower_components/jquery/jquery.js"></script>
   <script src="app/bower_components/handlebars/handlebars.js"></script>
   <script src="app/bower_components/ember/ember.js"></script>
+  <script src="app/bower_components/ember-data-shim/ember-data.js"></script>
   <script src="app/main.js"></script>
 </body>
 </html>

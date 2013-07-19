@@ -10,26 +10,72 @@ App.Router.map(function(){
   this.resource('stats');
 });
 
+App.IndexRoute = Ember.Route.extend({
+  redirect: function(){
+    this.transitionTo('stats');
+  }
+});
+
+App.Store = DS.Store.extend({
+  revision: 13,
+  adapter: 'DS.FixtureAdapter'
+});
+
+App.Stats = DS.Model.extend({
+  name: DS.attr('string'),
+  value: DS.attr('number')
+});
+
+App.Stats.FIXTURES = [
+  {
+    id: 0,
+    name: 'tires',
+    value: 6
+  },
+  {
+    id: 1,
+    name: 'brakes',
+    value: 3
+  },
+  {
+    id: 2,
+    name: 'gearbox',
+    value: 3
+  },
+  {
+    id: 3,
+    name: 'body',
+    value: 3
+  },
+  {
+    id: 4,
+    name: 'engine',
+    value: 3
+  },
+  {
+    id: 5,
+    name: 'suspension',
+    value: 2
+  }
+];
+
 App.StatsRoute = Ember.Route.extend({
   model: function(){
-    return [{
-      name: 'tires',
-      value: 6
-    },{
-      name: 'brakes',
-      value: 3
-    },{
-      name: 'gearbox',
-      value: 3
-    },{
-      name: 'body',
-      value: 3
-    },{
-      name: 'engine',
-      value: 3
-    },{
-      name: 'suspension',
-      value: 2
-    }];
+    return App.Stats.find();
+  }
+});
+
+App.StatsController = Ember.ObjectController.extend({
+  increment: function(stat){
+    var newValue = stat.get('value') + 1;
+    stat.set('value', newValue);
+  },
+  decrement: function(stat){
+    var newValue = stat.get('value') - 1;
+
+    // Don't go below zero
+    if (newValue < 0) { return; }
+
+    stat.set('value', newValue);
   }
 });

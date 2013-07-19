@@ -3,6 +3,10 @@ body {
 	padding-top: 40px;
 }
 
+.btn {
+  user-select: none;
+}
+
 /* Keep the brand from indenting */
 .navbar .brand {
 	margin-left: 0;
