@@ -8,6 +8,8 @@ App = Ember.Application.create();
 
 App.Router.map(function(){
   this.resource('stats');
+  this.resource('gear');
+  this.resource('player');
 });
 
 App.IndexRoute = Ember.Route.extend({

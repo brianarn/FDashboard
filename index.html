@@ -26,9 +26,9 @@
     <div class="navbar navbar-inverse navbar-fixed-bottom">
       <div class="navbar-inner">
         <ul class="nav">
-          <li class="active"><a href="#">Stats</a></li>
-          <li><a href="#">Gear</a></li>
-          <li><a href="#">Player</a></li>
+          <li>{{#linkTo stats}}Stats{{/linkTo}}</li>
+          <li>{{#linkTo gear}}Gear{{/linkTo}}</li>
+          <li>{{#linkTo player}}Player{{/linkTo}}</li>
         </ul>
       </div> <!-- .navbar-inner -->
     </div> <!-- .navbar .navbar-fixed-bottom -->
@@ -39,15 +39,27 @@
       <div class="btn-toolbar controls">
         {{#each model}}
         <div {{bindAttr class=":btn-group :row-fluid :stat name"}}>
-          <div class="btn btn-large span3" {{action decrement this}}><i class="icon-minus"></i></div>
+          <a class="btn btn-large span3" {{action decrement this}}><i class="icon-minus"></i></a>
           <div class="btn btn-large span6">
             {{capfirst name}}: <strong>{{value}}</strong>
           </div>
-          <div class="btn btn-large span3" {{action increment this}}><i class="icon-plus"></i></div>
+          <a class="btn btn-large span3" {{action increment this}}><i class="icon-plus"></i></a>
         </div> <!-- .btn-group -->
         {{/each}}
       </div> <!-- .btn-toolbar -->
     </div> <!-- #stats -->
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="gear">
+    <p>
+      Gear not implemented yet!
+    </p>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="player">
+    <p>
+      Player not implemented yet!
+    </p>
   </script>
 
   <!-- Woo Scripts -->

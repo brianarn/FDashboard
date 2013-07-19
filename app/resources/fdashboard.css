@@ -7,9 +7,18 @@ body {
   user-select: none;
 }
 
+.stat .btn:hover {
+  background-position: 0 0;
+}
+
 /* Keep the brand from indenting */
 .navbar .brand {
 	margin-left: 0;
+}
+
+.navbar .nav a.active {
+  color: #fff;
+  background-color: #000;
 }
 
 /* Help our control rows breathe a bit */
