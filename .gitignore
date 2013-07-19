@@ -37,3 +37,6 @@ Thumbs.db
 #######################
 *.swp
 .*.swp
+
+# Other files #
+app/bower_components
