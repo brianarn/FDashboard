@@ -10,7 +10,7 @@
     "tests"
   ],
   "dependencies": {
-    "flight": "~1.0.0",
-    "requirejs": "~2.1.0"
+    "ember": "1.0.0-rc.6",
+    "ember-data-shim": "~0.0.13"
   }
 }
